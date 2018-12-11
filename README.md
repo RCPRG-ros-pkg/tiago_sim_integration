@@ -20,20 +20,24 @@ Pliki launch należy umieścić w katalogu symulatora Tiago pod tą samą ście�
 ```
 
 ## Modele obiektów
-Wszystkie modele znajdują się w katalogach
+Wszystkie modele znajdują się w katalogach:
 ```
 /blender_ws
 ```
 Modele robocze i wyeksportowane elementy w formacie .dae utworzone na potrzeby świata laboratorium.
 
+---
 
 ```
 /gazebo_ws
 ```
 Modele zaciągnięte z Blendera z dodatkiem opisu .sdf. Gotowe do wykorzystania elementy w budowie świata gazebo.
 
+---
 
 ```
 /sweet_home_ws
 ```
 Model laboratorium z wyeksportowanymi modelami pojedynczych elementów w formacie .obj (nietolerowany przez gazebo format).
+
+---
