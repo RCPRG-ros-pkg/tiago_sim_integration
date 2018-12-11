@@ -1,0 +1,14 @@
+material Swivel_chair/Fabric
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture swivel_chair_fabric.jpeg
+      }
+    }
+  }
+}

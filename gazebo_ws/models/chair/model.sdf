@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.0">
+  <model name="chair">
+    <static>true</static>
+    <link name="chair">
+      <collision name="chair">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://chair/meshes/model.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="chair_mesh">
+	  <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+	        <uri>model://chair/meshes/model.dae</uri>
+	      </mesh>
+        </geometry>
+	<material>
+          <script>
+            <uri>model://chair/materials/scripts</uri>
+            <uri>model://chair/materials/textures</uri>
+            <name>Chair/Wood</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

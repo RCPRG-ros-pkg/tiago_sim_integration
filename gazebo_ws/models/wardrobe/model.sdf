@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.0">
+  <model name="wardrobe">
+    <static>true</static>
+    <link name="wardrobe">
+      <collision name="wardrobe">
+        <pose>0 0 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.5300 2.1740 2.0000</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="wardrobe_mesh">
+	  <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+	        <uri>model://wardrobe/meshes/model.dae</uri>
+	      </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

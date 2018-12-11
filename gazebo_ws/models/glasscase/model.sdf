@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.0">
+  <model name="glasscase">
+    <static>true</static>
+    <link name="glasscase">
+      <collision name="glasscase">
+        <pose>0 0 0.9910 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3870 0.8000 1.9820</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="glasscase_mesh">
+	  <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+	        <uri>model://glasscase/meshes/model.dae</uri>
+	      </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
