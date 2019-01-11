@@ -1,23 +1,21 @@
 # tiago_sim_integration
-Pliki integracyjne symulatora Tiago
+Repozytorium integracyjne symulatora Tiago
 
 # Integracja z symulatorem
-## Świat
+## Świat i modele
 Świat gazebo tego repozytorium znajduje się w
 ```
-/gazebo_ws/worlds
+/worlds
 ```
-
-Odpowiedni świat należy umieścić w katalogu symulatora Tiago:
+Modele mebli są w
 ```
-/tiago_public_ws/src/tiago_simulation/tiago_gazebo/worlds
+/models
 ```
-
-## Launch
-Pliki launch należy umieścić w katalogu symulatora Tiago pod tą samą ścieżką:
+Świat jest wczytywany w pliku launch:
 ```
-/tiago_sim_integration/tiago_simulation/tiago_2dnav_gazebo/launch
+roslaunch tiago_sim_integration tiago_navigation_public_012.launch
 ```
+Ten launch dodaje ścieżkę do folderu models, aby gazebo wyświetlało meble.
 
 ## Modele obiektów
 Wszystkie modele znajdują się w katalogach:
@@ -26,12 +24,6 @@ Wszystkie modele znajdują się w katalogach:
 ```
 Modele robocze i wyeksportowane elementy w formacie .dae utworzone na potrzeby świata laboratorium.
 
----
-
-```
-/gazebo_ws
-```
-Modele zaciągnięte z Blendera z dodatkiem opisu .sdf. Gotowe do wykorzystania elementy w budowie świata gazebo.
 
 ---
 
