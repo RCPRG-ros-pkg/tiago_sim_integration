@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(incare_tiago)
+project(tiago_sim_integration)
 # Get the information about this package's buildtime dependencies
   find_package(catkin REQUIRED
   #  COMPONENTS message_generation std_msgs sensor_msgs
