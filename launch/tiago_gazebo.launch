@@ -11,7 +11,7 @@
   <arg name="use_moveit_camera" default="false"/>
   <arg name="tuck_arm" default="true"/>
 
-  <env name="GAZEBO_MODEL_PATH" value="$(find tiago_gazebo)/models:$(find incare_tiago)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  <env name="GAZEBO_MODEL_PATH" value="$(find tiago_gazebo)/models:$(find tiago_sim_integration)/models:$(optenv GAZEBO_MODEL_PATH)"/>
 
   <env name="LC_NUMERIC" value="C" />
 

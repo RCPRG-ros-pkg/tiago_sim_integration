@@ -29,8 +29,8 @@
         args="tiago $(arg state) $(arg localization) $(arg mapping) $(arg map) $(arg octomap) $(arg multiple) $(arg tf_prefix)" output="screen"/>
 -->
 
-  <!-- MAP_SERVER and AMCL>
-  <node type="map_server" pkg="map_server" name="map_server" args="($arg map)"/>
+  <!-- MAP_SERVER and AMCL> -->
+  <node type="map_server" pkg="map_server" name="map_server" args="$(arg map)"/>
   <include file="$(find tiago_2dnav)/launch/localization_amcl.launch"/>
 
 

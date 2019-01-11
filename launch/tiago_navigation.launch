@@ -25,7 +25,7 @@
 
   <group ns="$(arg namespace)">
 
-    <include file="$(find incare_tiago)/launch/tiago_gazebo.launch">
+    <include file="$(find tiago_sim_integration)/launch/tiago_gazebo.launch">
       <arg name="world"      value="$(arg world)"/>
       <arg name="robot"      value="$(arg robot)"/>
       <arg name="gzpose"     value="$(arg gzpose)"/>
@@ -34,7 +34,7 @@
       <arg name="recording"      value="$(arg recording)"/>
     </include>
 
-    <include file="$(find incare_tiago)/launch/tiago_navigation_include.launch">
+    <include file="$(find tiago_sim_integration)/launch/tiago_navigation_include.launch">
       <arg name="state"          value="localization"/>
       <arg name="planner"        value="$(arg planner)"/>
       <arg name="global_planner" value="$(arg global_planner)"/>
