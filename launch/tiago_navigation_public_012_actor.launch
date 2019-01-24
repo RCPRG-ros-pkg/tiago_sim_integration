@@ -6,7 +6,8 @@
   <arg name="rviz"     default="true"/>
   <arg name="gzclient"     default="true"/>
   <arg name="localization"   default="amcl"/>
-  <arg name="gzpose"         default="-x 3.0 -y -1.0 -z 0 -R 0.0 -P 0.0 -Y 70.0"/>
+  <!-- <arg name="gzpose"         default="-x 3.0 -y -1.0 -z 0 -R 0.0 -P 0.0 -Y 70.0"/> -->
+  <arg name="gzpose"         default="-x 2.5 -y -1.5 -z 0 -R 0.0 -P 0.0 -Y 3.1415"/>
   <arg name="actor_script"   default="sitting"/>
   <arg name="world"          default="$(find tiago_sim_integration)/worlds/lab_012_v1_actor_$(arg actor_script)"/>
   <arg name="recording" default="false"/>
