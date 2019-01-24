@@ -1,0 +1,19 @@
+- it is suggested to compile with no testing flag
+
+catkin build -DCATKIN_ENABLE_TESTING=0
+
+OR add the flag permanently to catkin config
+
+catkin config -DCATKIN_ENABLE_TESTING=0
+
+OR additionally - create eclipse project files
+
+catkin config -G"Eclipse CDT4 - Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_ARG1=-std=c++11 -D__cplusplus=201103L -D__GXX_EXPERIMENTAL_CXX0X__=1 -DCATKIN_ENABLE_TESTING=0
+
+- create .pal folder in your home dir
+- create pose.yaml file in .pal folder
+- pal gazebo hardware cpp -> line ~365 change .x to X() etc. as in Gazebo8 ignition::math::Vector3 doesn't have public fields
+- rviz covariance plugin -> NOT RESOLVED NOW
+
+"error: no matching function for call to ‘isnan(const double&)’
+     if (isnan(cov_xy) || isnan(cov_yaw))"
