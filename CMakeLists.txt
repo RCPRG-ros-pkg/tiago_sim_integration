@@ -21,7 +21,7 @@ project(tiago_sim_integration)
 
   # Declare that this catkin package's runtime dependencies
   catkin_package(
-   CATKIN_DEPENDS tiago_2dnav_gazebo
+   CATKIN_DEPENDS tiago_2dnav_gazebo ros_actor_cmd_vel_plugin
   )
 
   # define executable using MyMessage1 etc.

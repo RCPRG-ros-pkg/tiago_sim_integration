@@ -4686,8 +4686,8 @@
 
 
     <!-- ============================= ACTOR =============================== -->
-    <actor name="actor">
-
+    <actor name="actor1">
+   	  <!--
       <skin>
         <filename>stand.dae</filename>
         <scale>1.0</scale>
@@ -4714,11 +4714,30 @@
         <filename>stand_up.dae</filename>
         <scale>1.0</scale>
       </animation>
+	  -->
 
+      <pose>-1.75 -4.75 0 +0.0 0.0 +0.5</pose>
+
+      <skin>
+        <filename>moonwalk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="actor1_plugin" filename="libros_actor_cmd_vel_plugin.so">
+        <animation_factor>5.1</animation_factor>
+      </plugin>
+
+      <!-- 
       <script>
-
+	  -->
         <!-- ========== stands still and then goes straight a little ========== -->
-        <!-- -->
+        <!-- 
         <trajectory id="0" type="stand">
           <waypoint>
             <time>0</time>
@@ -4730,7 +4749,7 @@
             <pose>-1.75 -4.75 0 +0.0 0.0 +0.5</pose>
           </waypoint>
         </trajectory>
-        
+        -->
         <!-- 
         <trajectory id="1" type="walk">
           <waypoint>
@@ -4793,9 +4812,9 @@
 
         </trajectory>
         -->
-
+      <!-- 
       </script>
-
+      -->
     </actor>
   </world>
 </sdf>
