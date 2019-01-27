@@ -81,7 +81,8 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>1383 507000000</sim_time>
+      <!-- <sim_time>1383 507000000</sim_time> -->
+      <sim_time>0 0</sim_time>
       <real_time>1258 45773493</real_time>
       <wall_time>1543956775 477947791</wall_time>
       <iterations>1248866</iterations>
@@ -4687,7 +4688,7 @@
 
     <!-- ============================= ACTOR =============================== -->
     <actor name="actor1">
-   	  <!--
+   	  <!-- -->
       <skin>
         <filename>stand.dae</filename>
         <scale>1.0</scale>
@@ -4714,7 +4715,10 @@
         <filename>stand_up.dae</filename>
         <scale>1.0</scale>
       </animation>
-	  -->
+	  
+
+
+      <!-- ***** START *** GAZEBO PLUGIN VERSION *****
 
       <pose>-1.75 -4.75 0 +0.0 0.0 +0.5</pose>
 
@@ -4733,11 +4737,16 @@
         <animation_factor>5.1</animation_factor>
       </plugin>
 
-      <!-- 
+      ****** *END* ****** -->
+      
+
+
       <script>
-	  -->
+	  
+
+
         <!-- ========== stands still and then goes straight a little ========== -->
-        <!-- 
+        <!-- **** START *****
         <trajectory id="0" type="stand">
           <waypoint>
             <time>0</time>
@@ -4767,54 +4776,98 @@
             <pose>-1 -4 0 +0.0 0.0 +0.5</pose>
           </waypoint>
         </trajectory>
-        -->
+        ******** END ***** -->
 
-        <!-- == sitting on the chair at first, then gets up and goes to door == -->
-        <!-- 
 
-        <trajectory id="0" type="sitting">
+
+
+        <!-- **** START ******* -->
+        <!-- HARD CODED TIME AND POSES | TRYING TO FOLLOW ROBOT -->
+        <!--  <loop>false</loop> AVOID THIS WHEN start time is non-0 -->
+        
+        <delay_start>0.1</delay_start>
+
+        <trajectory id="0" type="stand">
+
+          <!-- sim start -->
           <waypoint>
-            <time>0</time>
-            <pose>-1.0 5.5 +0.0 0.0 +0.0</pose>
+            <time>0.0</time>
+            <pose>-1.75 -4.75 0 +0.0 0.0 0.5</pose>
           </waypoint>
 
+          <!-- waiting for arm to be fully tucked -->
           <waypoint>
-            <time>5</time>
-            <pose>-1.0 5.5 +0.0 0.0 +0.0</pose>
+            <time>29.0</time>
+            <pose>-1.75 -4.75 0 +0.0 0.0 0.5</pose>
           </waypoint>
+
+        </trajectory>
+        
+
+        <trajectory id="1" type="walk">
+
+          <!-- start -> the robot near the actor -->
+          <waypoint>
+            <time>0.0</time>
+            <pose>-1.75 -4.75 0 +0.0 0.0 0.5</pose>
+          </waypoint>
+
+          <!-- between cab and step -->
+          <waypoint>
+            <time>6.0</time>
+            <pose>0.5 -2.5 0.0 +0.0 0.0 0.8</pose>
+          </waypoint>
+
+          <!-- between cab and chair -->
+          <waypoint>
+            <time>10.0</time>
+            <pose>1.5 -1.5 0.0 +0.0 0.0 1.0</pose>
+          </waypoint>
+
+          <!-- between cab and stanchion -->
+          <waypoint>
+            <time>14.0</time>
+            <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
+          </waypoint>
+
+          <!-- between chair and dest table -->
+          <waypoint>
+            <time>19.0</time>
+            <pose>1.5 1.0 0.0 +0.0 0.0 1.8</pose>
+          </waypoint>
+
+          <!-- between chair and dest table (bay) -->
+          <waypoint>
+            <time>22.0</time>
+            <pose>0.5 2.0 0.0 +0.0 0.0 1.8</pose>
+          </waypoint>
+
+          <!-- between chair and dest table (bay) rotate -->
+          <waypoint>
+            <time>22.5</time>
+            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
+          </waypoint>          
+
         </trajectory>
 
-        <trajectory id="1" type="stand_up">
-        </trajectory>
 
         <trajectory id="2" type="stand">
+
           <waypoint>
-            <time>0</time>
-            <pose>-0.75 5.5 +0.0 0.0 +0.0</pose>
+            <time>0.1</time>
+            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
           <waypoint>
-            <time>5</time>
-            <pose>-0.75 5.5 +0.0 0.0 +0.0</pose>
-          </waypoint>
-        </trajectory>
-
-        <trajectory id="3" type="walk">
-          <waypoint>
-            <time>0</time>
-            <pose>-0.75 5.5 +0.0 0.0 +0.0</pose>
-          </waypoint>
-
-          <waypoint>
-            <time>5</time>
-            <pose>2.25 5.5 +0.0 0.0 +0.0</pose>
+            <time>60.0</time>
+            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
         </trajectory>
-        -->
-      <!-- 
+         
+         
       </script>
-      -->
+
     </actor>
   </world>
 </sdf>
