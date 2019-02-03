@@ -1,1 +1,4 @@
-/home/jarek/.pal/pose.yaml
+# symlink of a file from ~/.pal/pose.yaml
+# initial pose of a robot in the map frame
+#{initial_cov_aa: 0.02, initial_cov_xx: 0.01, initial_cov_yy: 0.01, initial_pose_a: 0.0, initial_pose_x: 3.0, initial_pose_y: -1.0}
+{initial_cov_aa: 0.02, initial_cov_xx: 0.01, initial_cov_yy: 0.01, initial_pose_a: 3.0,initial_pose_x: 3, initial_pose_y: 2.0}
