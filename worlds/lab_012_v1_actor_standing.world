@@ -71,7 +71,7 @@
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
-      <shadows>0</shadows>  <!-- shadows disabled! -->
+      <shadows>1</shadows>  <!-- 0 - shadows disabled! -->
     </scene>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
@@ -4797,7 +4797,7 @@
 
           <!-- waiting for arm to be fully tucked -->
           <waypoint>
-            <time>29.0</time>
+            <time>37.0</time>
             <pose>-1.75 -4.75 0 +0.0 0.0 0.5</pose>
           </waypoint>
 
