@@ -4830,24 +4830,6 @@
             <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
-          <!-- between chair and dest table -->
-          <waypoint>
-            <time>17.0</time>
-            <pose>1.5 1.0 0.0 +0.0 0.0 1.8</pose>
-          </waypoint>
-
-          <!-- between chair and dest table (bay) -->
-          <waypoint>
-            <time>20.0</time>
-            <pose>0.5 2.0 0.0 +0.0 0.0 1.8</pose>
-          </waypoint>
-
-          <!-- between chair and dest table (bay) rotate -->
-          <waypoint>
-            <time>20.5</time>
-            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
-          </waypoint>          
-
         </trajectory>
 
 
@@ -4855,12 +4837,12 @@
 
           <waypoint>
             <time>0.1</time>
-            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
+            <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
           <waypoint>
-            <time>60.0</time>
-            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
+            <time>180.0</time>
+            <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
         </trajectory>
@@ -4869,5 +4851,140 @@
       </script>
 
     </actor>
+
+    <!-- ******************************** -->
+
+    <actor name="actor2">
+
+      <skin>
+        <filename>stand.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+
+      <animation name="stand">
+        <filename>stand.dae</filename>
+        <scale>1.0</scale>
+        <interpolate_x>false</interpolate_x>
+      </animation>
+
+      <animation name="walk">
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <animation name="sitting">
+        <filename>sitting.dae</filename>
+        <scale>1.0</scale>
+      </animation>
+
+      <animation name="stand_up">
+        <filename>stand_up.dae</filename>
+        <scale>1.0</scale>
+      </animation>
+
+      <script>
+
+        <delay_start>0.1</delay_start>
+
+        <trajectory id="0" type="stand">
+
+          <!-- sim start -->
+          <waypoint>
+            <time>0.0</time>
+            <pose>2.75 -3.00 0 +0.0 0.0 1.5707</pose>
+          </waypoint>
+
+          <!-- waiting for arm to be fully tucked -->
+          <waypoint>
+            <time>36.5</time>
+            <pose>2.75 -3.00 0 +0.0 0.0 1.5707</pose>
+          </waypoint>
+
+        </trajectory>
+        
+
+        <trajectory id="1" type="stand">
+
+          <waypoint>
+            <time>0.0</time>
+            <pose>2.75 -3.00 0 +0.0 0.0 1.5707</pose>
+          </waypoint>
+
+          <waypoint>
+            <time>13.0</time>
+            <pose>2.75 -3.00 0 +0.0 0.0 1.5707</pose>
+          </waypoint>
+
+        </trajectory>
+
+        <trajectory id="2" type="stand">
+
+          <waypoint>
+            <time>0.1</time>
+            <pose>2.75 -3.00 0 +0.0 0.0 1.57</pose>
+          </waypoint>
+
+          <waypoint>
+            <time>5.0</time>
+            <pose>2.75 -3.00 0 +0.0 0.0 1.57</pose>
+          </waypoint>
+
+        </trajectory>
+         
+        <trajectory id="3" type="walk">
+
+          <waypoint>
+            <time>0.1</time>
+            <pose>2.75 -3.00 0 +0.0 0.0 1.57</pose>
+          </waypoint>
+
+          <waypoint>
+            <time>5.0</time>
+            <pose>2.75 -2.0 0.0 +0.0 0.0 2.35</pose>
+          </waypoint>
+
+          <waypoint>
+            <time>10.0</time>
+            <pose>0.5 -2.0 0.0 +0.0 0.0 3.14</pose>
+          </waypoint>          
+
+          <waypoint>
+            <time>15.0</time>
+            <pose>0.5 -3.5 0.0 +0.0 0.0 -1.57</pose>
+          </waypoint> 
+
+          <waypoint>
+            <time>20.0</time>
+            <pose>1.0 -4.25 0.0 +0.0 0.0 -1.27</pose>
+          </waypoint>   
+
+          <waypoint>
+            <time>25.0</time>
+            <pose>1.0 -4.25 0.0 +0.0 0.0 -3.14</pose>
+          </waypoint> 
+
+
+        </trajectory>
+
+        <trajectory id="4" type="stand">
+
+          <waypoint>
+            <time>0.0</time>
+            <pose>1.0 -4.25 0.0 +0.0 0.0 3.14</pose>
+          </waypoint> 
+
+          <waypoint>
+            <time>180.0</time>
+            <pose>1.0 -4.25 0.0 +0.0 0.0 3.14</pose>
+          </waypoint>           
+
+        </trajectory>
+
+      </script>
+
+    </actor>
+
+
   </world>
 </sdf>
