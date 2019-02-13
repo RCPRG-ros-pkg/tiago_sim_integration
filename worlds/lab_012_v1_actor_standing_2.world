@@ -354,6 +354,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <!--
       <model name='locker_small_clone'>
         <pose frame=''>3.63 -0.376701 0.316667 0 -0 3.14159</pose>
         <scale>1 1 1</scale>
@@ -364,6 +365,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      -->
       <model name='rectangle_table'>
         <pose frame=''>-0.647988 -0.512943 0.1 0 0 -1.5708</pose>
         <scale>1 1 1</scale>
@@ -484,6 +486,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <!--
       <model name='swivel_chair_clone_0_clone_3'>
         <pose frame=''>3.24752 1.05154 0 0 0 -0.5</pose>
         <scale>1 1 1</scale>
@@ -494,6 +497,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      -->
       <model name='swivel_chair_clone_0_clone_4'>
         <pose frame=''>3.2528 4.16498 0 0 0 -0.5</pose>
         <scale>1 1 1</scale>
@@ -607,6 +611,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <!--
       <model name='work_table_clone_0'>
         <pose frame=''>3.24193 0.38987 0 0 0 -1.5708</pose>
         <scale>1 1 1</scale>
@@ -617,6 +622,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      -->
       <model name='work_table_clone_clone'>
         <pose frame=''>3.24601 5.74602 0 0 0 -1.5708</pose>
         <scale>1 1 1</scale>
@@ -3691,6 +3697,7 @@
       </link>
       <pose frame=''>2.64595 2.07295 0 0 0 -1.5708</pose>
     </model>
+    <!--
     <model name='work_table_clone_0'>
       <static>1</static>
       <link name='work_table'>
@@ -3817,6 +3824,7 @@
       </link>
       <pose frame=''>2.64177 0.043676 0 0 0 -1.5708</pose>
     </model>
+    -->
     <model name='work_table_clone_clone'>
       <static>1</static>
       <link name='work_table'>
@@ -3943,6 +3951,7 @@
       </link>
       <pose frame=''>2.59258 3.72818 0 0 0 -1.5708</pose>
     </model>
+    <!--
     <model name='locker_small_clone'>
       <static>1</static>
       <link name='locker_small'>
@@ -3982,6 +3991,7 @@
       </link>
       <pose frame=''>2.86013 -1.52918 0 0 -0 1.5708</pose>
     </model>
+    -->
     <model name='swivel_chair_clone_0_clone'>
       <static>1</static>
       <link name='swivel_chair'>
@@ -4170,6 +4180,7 @@
       </link>
       <pose frame=''>-1.4345 4.20237 0 0 0 -0.5</pose>
     </model>
+    <!--
     <model name='swivel_chair_clone_0_clone_3'>
       <static>1</static>
       <link name='swivel_chair'>
@@ -4217,6 +4228,7 @@
       </link>
       <pose frame=''>3.24752 1.05154 0 0 0 -0.5</pose>
     </model>
+    -->
     <model name='swivel_chair_clone_0_clone_4'>
       <static>1</static>
       <link name='swivel_chair'>
@@ -4826,7 +4838,7 @@
 
           <!-- between cab and stanchion -->
           <waypoint>
-            <time>13.0</time>
+            <time>15.0</time>
             <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
@@ -4835,19 +4847,61 @@
 
         <trajectory id="2" type="stand">
 
+          <!-- wait for robot to come back -->
           <waypoint>
             <time>0.1</time>
             <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
           <waypoint>
-            <time>180.0</time>
+            <time>70.0</time>
             <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
         </trajectory>
          
-         
+        <trajectory id="3" type="walk">
+
+          <waypoint>
+            <time>0.1</time>
+            <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
+          </waypoint>
+
+          <!-- between chair and dest table -->
+          <waypoint>
+            <time>3.0</time>
+            <pose>1.5 1.0 0.0 +0.0 0.0 1.8</pose>
+          </waypoint>
+
+          <!-- between chair and dest table (bay) -->
+          <waypoint>
+            <time>6.0</time>
+            <pose>0.5 2.0 0.0 +0.0 0.0 1.8</pose>
+          </waypoint>
+
+          <!-- between chair and dest table (bay) rotate -->
+          <waypoint>
+            <time>6.5</time>
+            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
+          </waypoint>  
+
+        </trajectory>
+
+        <trajectory id="4" type="stand">
+
+          <!-- wait near the table -->
+          <waypoint>
+            <time>0.1</time>
+            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
+          </waypoint>
+
+          <waypoint>
+            <time>180.0</time>
+            <pose>0.5 2.0 0.0 +0.0 0.0 1.57</pose>
+          </waypoint>
+
+        </trajectory>
+
       </script>
 
     </actor>
@@ -4911,10 +4965,11 @@
             <pose>2.75 -3.00 0 +0.0 0.0 1.5707</pose>
           </waypoint>
 
+          <!-- wait for another actor to stop -->
           <waypoint>
-            <time>13.0</time>
+            <time>19.0</time>
             <pose>2.75 -3.00 0 +0.0 0.0 1.5707</pose>
-          </waypoint>
+          </waypoint>         
 
         </trajectory>
 
@@ -4925,8 +4980,15 @@
             <pose>2.75 -3.00 0 +0.0 0.0 1.57</pose>
           </waypoint>
 
+          <!-- wait for second app to initialize -->
           <waypoint>
             <time>5.0</time>
+            <pose>2.75 -3.00 0 +0.0 0.0 1.57</pose>
+          </waypoint>
+
+          <!-- wait for robot arrival and its speech finish -->
+          <waypoint>
+            <time>15.0</time>
             <pose>2.75 -3.00 0 +0.0 0.0 1.57</pose>
           </waypoint>
 
@@ -4955,12 +5017,12 @@
           </waypoint> 
 
           <waypoint>
-            <time>20.0</time>
+            <time>18.0</time>
             <pose>1.0 -4.25 0.0 +0.0 0.0 -1.27</pose>
           </waypoint>   
 
           <waypoint>
-            <time>25.0</time>
+            <time>21.0</time>
             <pose>1.0 -4.25 0.0 +0.0 0.0 -3.14</pose>
           </waypoint> 
 
@@ -4970,7 +5032,7 @@
         <trajectory id="4" type="stand">
 
           <waypoint>
-            <time>0.0</time>
+            <time>0.1</time>
             <pose>1.0 -4.25 0.0 +0.0 0.0 3.14</pose>
           </waypoint> 
 
