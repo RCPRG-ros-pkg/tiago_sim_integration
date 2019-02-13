@@ -4809,7 +4809,7 @@
 
           <!-- waiting for arm to be fully tucked -->
           <waypoint>
-            <time>36.5</time>
+            <time>35.5</time>
             <pose>-1.75 -4.75 0 +0.0 0.0 0.5</pose>
           </waypoint>
 
@@ -4854,7 +4854,7 @@
           </waypoint>
 
           <waypoint>
-            <time>70.0</time>
+            <time>55.0</time> <!-- was 70 - often too late -->
             <pose>2.0 -0.2 0.0 +0.0 0.0 1.57</pose>
           </waypoint>
 
@@ -4988,7 +4988,7 @@
 
           <!-- wait for robot arrival and its speech finish -->
           <waypoint>
-            <time>15.0</time>
+            <time>10.5</time> <!-- was 15.0 - sometimes too late -->
             <pose>2.75 -3.00 0 +0.0 0.0 1.57</pose>
           </waypoint>
 
