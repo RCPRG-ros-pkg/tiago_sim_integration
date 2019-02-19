@@ -12,6 +12,7 @@
   <arg name="world"          default="$(find tiago_sim_integration)/worlds/lab_012_v1_actor_$(arg actor_script)"/>
   <arg name="recording" default="false"/>
 
+  <rosparam command="load" file="$(find tiago_sim_integration)/config/tiago_motions_extenstion.yaml" />
   <include file="$(find tiago_sim_integration)/launch/tiago_navigation.launch">
       <arg name="robot"          value="$(arg robot)"/>
       <arg name="global_planner" value="navfn"/>
