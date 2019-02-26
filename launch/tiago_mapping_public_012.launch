@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-  <env name="GAZEBO_MODEL_PATH" value="$(find tiago_sim_integration)/models:$(optenv GAZEBO_MODEL_PATH)"/>
   <arg name="robot" default="steel"/>
   <arg name="arm"  default="$(eval {'iron': False}.get(arg('robot'), True))"/>
   <arg name="end_effector"  default="$(eval {'iron': 'false', 'steel': 'pal-gripper', 'titanium': 'pal-hey5'}.get(arg('robot'), 'pal-gripper'))"/>
