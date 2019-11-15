@@ -14,7 +14,7 @@
   <arg name="localization"   default="amcl"/>
   <arg name="gzpose"         default="-x -0.3 -y -4.0 -z 0 -R 0.0 -P 0.0 -Y 0.15"/>
   <arg name="tuck_arm"  default="true"/>
-  <arg name="world"          default="lab_012_v1"/>
+  <arg name="world"          default="lab_012_v2"/>
   <include file="$(find tiago_2dnav_gazebo)/launch/tiago_navigation.launch">
       <arg name="arm" value="$(arg arm)"/>
       <arg name="end_effector" value="$(arg end_effector)"/>
