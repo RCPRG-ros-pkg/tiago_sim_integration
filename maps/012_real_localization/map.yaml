@@ -1,4 +1,4 @@
-image: map_real.pgm
+image: map_real_localization.pgm
 resolution: 0.025000
 origin: [-1.499024, -3.620599, 0.000000]
 negate: 0

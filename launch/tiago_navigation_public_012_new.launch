@@ -6,7 +6,7 @@
   <arg name="ft_sensor"  default="$(eval {'titanium': 'schunk-ft'}.get(arg('robot'), 'false'))"/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
-  <arg name="map"   default="$(find tiago_sim_integration)/maps/012"/>
+  <arg name="map"   default="$(find tiago_sim_integration)/maps/012_sim_planning"/>
   <arg name="rviz"     default="true"/>
   <arg name="gzclient"     default="true"/>
   <arg name="recording" default="false"/>
