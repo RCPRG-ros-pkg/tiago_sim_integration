@@ -19,7 +19,7 @@ global_costmap:
 
   static_layer:
     enabled  : true
-    map_topic: map
+    map_topic: map_planning
 
   obstacle_laser_layer:
     enabled: true

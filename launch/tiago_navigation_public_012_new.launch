@@ -6,7 +6,8 @@
   <arg name="ft_sensor"  default="$(eval {'titanium': 'schunk-ft'}.get(arg('robot'), 'false'))"/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
-  <arg name="map"   default="$(find tiago_sim_integration)/maps/012_sim_planning"/>
+  <arg name="map_localization"   default="$(find tiago_sim_integration)/maps/012_sim_localization"/>
+  <arg name="map_planning"   default="$(find tiago_sim_integration)/maps/012_sim_planning"/>
   <arg name="rviz"     default="true"/>
   <arg name="gzclient"     default="true"/>
   <arg name="recording" default="false"/>
@@ -15,6 +16,9 @@
   <arg name="gzpose"         default="-x -0.3 -y -4.0 -z 0 -R 0.0 -P 0.0 -Y 0.15"/>
   <arg name="tuck_arm"  default="true"/>
   <arg name="world"          default="lab_012_v2"/>
+
+  <!-- Run the planning map server -->
+  <node name="map_server_planning" pkg="map_server" type="map_server" args="$(arg map_planning)/map.yaml map:=/map_planning"/>
 
   <!--<include file="$(find tiago_2dnav_gazebo)/launch/tiago_navigation.launch">
       <arg name="arm" value="$(arg arm)"/>
@@ -28,7 +32,7 @@
       <arg name="public_sim"     value="True"/>
       <arg name="gzpose"         value="$(arg gzpose)"/>
       <arg name="tuck_arm"       value="$(arg tuck_arm)"/>
-      <arg name="map"            value="$(arg map)"/>
+      <arg name="map"            value="$(arg map_localization)"/>
       <arg name="rviz"           value="$(arg rviz)"/>
       <arg name="gzclient"       value="$(arg gzclient)"/>
       <arg name="recording"  value="$(arg recording)"/>
@@ -80,7 +84,7 @@
       <arg name="global_planner" value="$(arg global_planner)"/>
       <arg name="local_planner"  value="$(arg local_planner)"/>
       <arg name="localization"   value="$(arg localization)"/>
-      <arg name="map"            value="$(arg map)"/>
+      <arg name="map"            value="$(arg map_localization)"/>
       <arg name="public_sim"     value="$(arg public_sim)"/>
       <arg name="rgbd_sensors"   value="$(arg advanced_navigation)"/>
       <arg name="laser_model"    value="$(arg laser_model)"/>
