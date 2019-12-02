@@ -1,17 +1,17 @@
 # Odometry model:
 odom_model_type: diff-corrected
-odom_alpha1    : 0.02
-odom_alpha2    : 0.002
-odom_alpha3    : 0.08
-odom_alpha4    : 0.002
+odom_alpha1    : 0.2
+odom_alpha2    : 0.2
+odom_alpha3    : 0.01
+odom_alpha4    : 0.01
 
 # Particle filter:
 min_particles    : 500
 max_particles    : 5000
 kld_err          : 0.05
 kld_z            : 0.99
-update_min_d     : 0.2
-update_min_a     : !degrees 10.0
+update_min_d     : 0.1
+update_min_a     : !degrees 5.0
 resample_interval: 1
 converge_dist_threshold: 0.5
 
@@ -23,7 +23,7 @@ converge_dist_threshold: 0.5
 laser_model_type         : likelihood_field
 laser_max_range          : -1.0 #use reported max range (default)
 laser_min_range          : -1.0 #use reported min range (default)
-laser_max_beams          : 30
+laser_max_beams          : 100
 laser_z_hit              : 0.5
 laser_z_short            : 0.05
 laser_z_max              : 0.05

@@ -47,7 +47,7 @@
   <arg name="planner"        default="base"/>
   <arg name="global_planner" default="global_planner"/>
   <!--<arg name="local_planner"  default="$(eval 'teb' if arg('public_sim') else 'pal')"/>-->
-  <arg name="local_planner"  default="eband"/>
+  <arg name="local_planner"  default="teb"/>
   <arg name="advanced_navigation"   default="false"/> <!-- Requires extra software from PAL Robotics-->
 
   <arg name="sim_sufix" value="_public_sim"     if="$(arg public_sim)"/>
@@ -129,6 +129,7 @@
     </include>
   </group>
 
-
+  <!-- We have to set amcl params this ugly way! -->
+  <node name="amcl_params_update" pkg="tiago_sim_integration" type="amcl_params_update.py" output="screen" />
 
 </launch>
