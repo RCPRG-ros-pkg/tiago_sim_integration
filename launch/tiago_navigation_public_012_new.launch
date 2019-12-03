@@ -17,6 +17,10 @@
   <arg name="tuck_arm"  default="true"/>
   <arg name="world"          default="lab_012_v2"/>
 
+  <!-- Due to some bug in tiago simulation (tiago moves very slowly when it should be standing still),
+       the amcl localization must be triggered periodically -->
+  <node name="amcl_periodic_update" pkg="tiago_sim_integration" type="amcl_periodic_update.py" />
+
   <!-- Run the planning map server -->
   <node name="map_server_planning" pkg="map_server" type="map_server" args="$(arg map_planning)/map.yaml map:=/map_planning"/>
 
