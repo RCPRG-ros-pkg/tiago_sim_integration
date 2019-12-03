@@ -44,7 +44,7 @@ TebLocalPlannerROS:
  include_costmap_obstacles: True
  costmap_obstacles_behind_robot_dist: 1.0
  obstacle_poses_affected: 30
- inflation_dist: 0.50
+ inflation_dist: 0.0
 
  ## Costmap converter plugin (optional)
  # costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSConcaveHull" # no visible improvement

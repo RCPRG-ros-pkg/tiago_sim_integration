@@ -38,20 +38,27 @@ if __name__ == "__main__":
 
     rospy.init_node('amcl_params_update', anonymous=False)
 
+    # Wait for initialization of the system
     rospy.sleep(5.0)
 
     dynparam_client = dynamic_reconfigure.client.Client('amcl')
     config = dynparam_client.get_configuration()
-    assert 'odom_alpha1' in config
-    assert 'odom_alpha2' in config
-    assert 'odom_alpha3' in config
-    assert 'odom_alpha4' in config
 
     params = {
-        'odom_alpha1': 0.2,
-        'odom_alpha2': 0.2,
-        'odom_alpha3': 0.08,
+        'odom_alpha1': 0.1,
+        'odom_alpha2': 0.1,
+        'odom_alpha3': 0.002,
         'odom_alpha4': 0.002,
+        'laser_max_beams': 200,
+        'update_min_d': 0.1,
+        'update_min_a': 0.05
+
     }
+
+    # Check if the parameters we are changing are available.
+    for param_name in params:
+        if not param_name in config:
+            raise Exception('Parameter "' + param_name + '" is not present in config of amcl.')
+
     config = dynparam_client.update_configuration(params)
     print 'amcl_params_update DONE'
