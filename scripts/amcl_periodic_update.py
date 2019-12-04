@@ -31,8 +31,16 @@
 # Author: Dawid Seredynski
 #
 
+import copy
 import rospy
 from std_srvs.srv import Empty
+from geometry_msgs.msg import PoseWithCovarianceStamped
+
+amcl_pose = None
+
+def callback(data):
+    global amcl_pose
+    amcl_pose = data
 
 if __name__ == "__main__":
     rospy.init_node('amcl_periodic_update', anonymous=False)
@@ -51,7 +59,19 @@ if __name__ == "__main__":
     sleep_time = 5.0
     print 'amcl_periodic_update: starting periodic update every ' + str(sleep_time) + ' seconds'
 
+    initialpose_pub = rospy.Publisher('/initialpose', PoseWithCovarianceStamped, queue_size=10)
+
+    rospy.Subscriber("/amcl_pose", PoseWithCovarianceStamped, callback)
+
     while not rospy.is_shutdown():
+
+        if amcl_pose is None:
+            print 'amcl_pose is None'
+        else:
+            pose_cov = copy.copy(amcl_pose)
+            pose_cov.pose.covariance = (0.001, 0.0001, 0.0, 0.0, 0.0, 0.0, 0.0001, 0.0015, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.003)
+            initialpose_pub.publish( pose_cov );
+
         request_nomotion_update()
         try:
             rospy.sleep(sleep_time)

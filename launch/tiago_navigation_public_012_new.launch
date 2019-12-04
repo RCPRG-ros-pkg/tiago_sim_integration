@@ -18,7 +18,7 @@
   <arg name="world"          default="lab_012_v2"/>
 
   <!-- Due to some bug in tiago simulation (tiago moves very slowly when it should be standing still),
-       the amcl localization must be triggered periodically -->
+       the amcl localization must be triggered periodically, and some noise must be added to particles. -->
   <node name="amcl_periodic_update" pkg="tiago_sim_integration" type="amcl_periodic_update.py" />
 
   <!-- Run the planning map server -->
