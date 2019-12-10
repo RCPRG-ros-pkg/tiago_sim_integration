@@ -69,7 +69,18 @@ if __name__ == "__main__":
             print 'amcl_pose is None'
         else:
             pose_cov = copy.copy(amcl_pose)
-            pose_cov.pose.covariance = (0.001, 0.0001, 0.0, 0.0, 0.0, 0.0, 0.0001, 0.0015, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.003)
+            # From documentation of geometry_msgs/PoseWithCovariance Message:
+            # Row-major representation of the 6x6 covariance matrix
+            # The orientation parameters use a fixed-axis representation.
+            # In order, the parameters are:
+            # (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
+            pose_cov.pose.covariance =\
+                (0.001,     0.0001,     0.0,    0.0,    0.0,    0.0,
+                 0.0001,    0.0015,     0.0,    0.0,    0.0,    0.0,
+                 0.0,       0.0,        0.0,    0.0,    0.0,    0.0,
+                 0.0,       0.0,        0.0,    0.0,    0.0,    0.0,
+                 0.0,       0.0,        0.0,    0.0,    0.0,    0.0,
+                 0.0,       0.0,        0.0,    0.0,    0.0,    0.01)
             initialpose_pub.publish( pose_cov );
 
         request_nomotion_update()

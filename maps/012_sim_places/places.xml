@@ -1,0 +1,20 @@
+<places>
+    <map_context name="sim" map_param_filename="../012_sim_planning/map.yaml" map_filename="../012_sim_planning/map-clean.pgm" >
+        <volumetric_mask filename="img/places_mask.png" />
+
+        <volumetric_place id="korytarz_a" name="korytarz A" filename="img/korytarz_a.png" />
+        <volumetric_place id="korytarz_b" name="korytarz B" filename="img/korytarz_b.png" />
+        <volumetric_place id="kuchnia" name="kuchnia" filename="img/kuchnia.png" />
+        <volumetric_place id="pokoj" name="pok\303\263j" filename="img/pokoj.png" />
+        <volumetric_place id="salon" name="salon" filename="img/salon.png" />
+        <volumetric_place id="warsztat" name="warsztat" filename="img/warsztat.png" />
+
+        <point_place id="fotel" name="fotel" position="-0.64 0.34" front_vec="0 -1" />
+        <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0" />
+    </map_context>
+
+    <map_context name="real" map_param_filename="../012_real_localization/map.yaml" map_filename="../012_real_localization/map_real.pgm" >
+    </map_context>
+
+    <map_transform map1="sim" map2="real" translation="-1.87296056747 -0.53914129734" rotation="-0.0821140241595" />
+</places>
