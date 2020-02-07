@@ -12,7 +12,7 @@
         <point_place id="fotel" name="fotel" position="-0.64 0.34" front_vec="0 -1" />
         <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0" />
 
-        <point_place id="ladowarka" name="ładowarka" position="-2.1 0.0" front_vec="1 -0.1" />
+        <point_place id="ladowarka" name="ładowarka" position="-2.1 -0.5" front_vec="1 -0.1" />
     </map_context>
 
     <map_context name="real" map_param_filename="../012_real_localization/map.yaml" map_filename="../012_real_localization/map_real.pgm" >
