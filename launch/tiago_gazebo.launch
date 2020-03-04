@@ -54,7 +54,7 @@
     <arg name="camera_model" value="$(arg camera_model)"/>
     <arg name="public_sim"  value="$(arg public_sim)"/>
     <arg name="use_moveit_camera" value="$(arg use_moveit_camera)"/>
-    <arg name="use_dynamic_footprint" value="$(arg use_dynamic_footprint)"/>
+    <!--<arg name="use_dynamic_footprint" value="$(arg use_dynamic_footprint)"/>-->
   </include>
 
   <!-- point cloud throttle and filter -->
