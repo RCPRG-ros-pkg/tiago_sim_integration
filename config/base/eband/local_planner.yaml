@@ -1,0 +1,12 @@
+base_local_planner: eband_local_planner/EBandPlannerROS
+
+EBandPlannerROS:
+  Ctrl_Rate : 20
+  differential_drive: True
+  max_acceleration: 0.2
+  max_vel_lin: 0.25
+  max_vel_th: 0.2
+  min_vel_lin: 0.02
+  min_vel_th: 0.0
+  xy_goal_tolerance: 0.15
+  yaw_goal_tolerance: 0.5

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.0">
+  <model name="locker_high">
+    <static>true</static>
+    <link name="locker_high">
+      <collision name="locker_high">
+        <pose>0 0 1.1500 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4400 0.8000 2.3000</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="locker_high_mesh">
+	  <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+	        <uri>model://locker_high/meshes/model.dae</uri>
+	      </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

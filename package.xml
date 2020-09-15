@@ -1,0 +1,17 @@
+<package format="2">
+  <name>tiago_sim_integration</name>
+  <version>1.2.4</version>
+  <description>
+    This package provides foo capability.
+  </description>
+  <maintainer email="incare@incare.ia.pw.edu.pl">Wojciech Dudek</maintainer>
+  <license>BSD</license>
+
+  <url>http://ros.org/wiki/incare</url>
+  <author>Wojciech Dudek, Łukasz Zieliński</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>tiago_2dnav_gazebo</exec_depend>
+  <exec_depend>ros_actor_cmd_vel_plugin</exec_depend>
+</package>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.0">
+  <model name="locker_small">
+    <static>true</static>
+    <link name="locker_small">
+      <collision name="locker_small">
+        <pose>0 0 0.7750 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4400 0.8000 1.5500</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="locker_small_mesh">
+	  <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+	        <uri>model://locker_small/meshes/model.dae</uri>
+	      </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

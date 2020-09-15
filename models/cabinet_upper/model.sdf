@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.0">
+  <model name="cabinet_upper">
+    <static>true</static>
+    <link name="cabinet_upper">
+      <collision name="cabinet_upper">
+        <pose>0 0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.401 0.8 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="cabinet_upper_mesh">
+	  <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+	        <uri>model://cabinet_upper/meshes/model.dae</uri>
+	      </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

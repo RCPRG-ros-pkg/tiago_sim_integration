@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<sdf version="1.0">
+  <model name="square_table">
+    <static>true</static>
+    <link name="table_link">
+      <collision name="surface">
+        <pose>0 0 0.7115 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.8 0.8 0.057</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.6</mu>
+              <mu2>0.6</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+	
+      <collision name="front_left_leg">
+        <pose>0.3412 0.3212 0.3415 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.683</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <collision name="front_right_leg">
+        <pose>0.3412 -0.3212 0.3415 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.683</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <collision name="back_right_leg">
+        <pose>-0.3412 -0.3212 0.3415 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.683</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <collision name="back_left_leg">
+        <pose>-0.3412 0.3212 0.3415 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.683</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <visual name="table_mesh">
+	<cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+	    <uri>model://square_table/meshes/model.dae</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

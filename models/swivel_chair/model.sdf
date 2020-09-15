@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.0">
+  <model name="swivel_chair">
+    <static>true</static>
+    <link name="swivel_chair">
+      <collision name="swivel_chair">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://swivel_chair/meshes/model.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="swivel_chair_mesh">
+	  <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+	        <uri>model://swivel_chair/meshes/model.dae</uri>
+	      </mesh>
+        </geometry>
+	<material>
+          <script>
+            <uri>model://swivel_chair/materials/scripts</uri>
+            <uri>model://swivel_chair/materials/textures</uri>
+            <name>Swivel_chair/Fabric</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
