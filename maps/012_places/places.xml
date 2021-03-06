@@ -14,20 +14,28 @@
 
         <point_place id="ladowarka" name="ładowarka" position="-2.1 -0.5" front_vec="1 -0.1" face_place="false" />
 
-        <point_place id="John" name="John" position="-1 0" front_vec="1 0.1"  face_place="true"/>
-        <point_place id="John_dest" name="John_dest" position="2.5 5.5" front_vec="1 0.1"  face_place="true"/>
+       <!-- <point_place id="John" name="John" position="-1 0" front_vec="1 0.1"  face_place="true"/>
+        <point_place id="John_dest" name="John_dest" position="3.5 6.5" front_vec="0 -1"  face_place="false"/> -->
        <!-- <point_place id="Sara" name="Sara" position="4 5" front_vec="-1 -0.1" /> -->
-        <point_place id="Sara" name="Sara" position="-1 0.5" front_vec="1 0.1"  face_place="true"/> 
-        <point_place id="Alice" name="Alice" position="3.5 1" front_vec="-0.5 0.5"  face_place="true"/>
-        <point_place id="Alice_dest" name="Alice_dest" position="1 -1" front_vec="-1 0"  face_place="true"/>
-        <point_place id="Peter" name="Peter" position="2 10" front_vec="1 -0.1"  face_place="true"/>
-        <point_place id="Rico" name="Rico" position="2 10" front_vec="1 -0.1"  face_place="false"/>
+        <point_place id="Sara" name="Sara" position="-1 0.5" front_vec="1 0.1"  face_place="false"/> 
+        <!-- <point_place id="Alice" name="Alice" position="3.5 1" front_vec="-0.5 0.5"  face_place="false"/>
+        <point_place id="Alice_dest" name="Alice_dest" position="1 -1" front_vec="-1 0"  face_place="false"/> -->
+        <point_place id="Peter" name="Peter" position="2 10" front_vec="1 -0.1"  face_place="false"/>
+        <!-- <point_place id="Rico" name="Rico" position="2 10" front_vec="1 -0.1"  face_place="false"/> -->
     </map_context>
 
     <map_context name="real" map_param_filename="../012_real_localization/map.yaml" map_filename="../012_real_localization/map_real.pgm" >
         <volumetric_place id="korytarz" name="korytarz" filename="img/korytarz_a.png" />
         <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" />
         <point_place id="wojtas" name="wojtas" position="3.0 5.3" front_vec="1 1" />
+        <point_place id="Rico" name="Rico" position="2 10" front_vec="1 -0.1"  face_place="false"/>
+        <point_place id="John" name="John" position="-1 -0.5" front_vec="1 0.1"  face_place="false"/>
+        <point_place id="Biuro" name="Biuro" position="4.8 6.5" front_vec="-1 -1"  face_place="false"/>
+        <point_place id="Salon" name="Salon" position="1 0" front_vec="1 0"  face_place="false"/>
+        <point_place id="Tomek" name="Tomek" position="1 1" front_vec="-0.5 0.5"  face_place="false"/>
+        <point_place id="Maciej" name="Maciej" position="1 1" front_vec="-0.5 0.5"  face_place="false"/>
+        <point_place id="Krzysztof" name="Krzysztof" position="1 1" front_vec="-0.5 0.5"  face_place="false"/>
+        <point_place id="Gustaw" name="Gustaw" position="1 1" front_vec="-0.5 0.5"  face_place="false"/>
     </map_context>
 
     <map_transform map1="sim" map2="real" translation="-1.87296056747 -0.53914129734" rotation="-0.0821140241595" />
