@@ -10,7 +10,7 @@
         <volumetric_place id="warsztat" name="warsztat" filename="img/warsztat.png"  face_place="false" is_human="false"/>
 
         <point_place id="fotel" name="fotel" position="-0.64 0.34" front_vec="0 -1"  face_place="true" is_human="false"/>
-        <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0"  face_place="false" is_human="false"/>
+        <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0"  face_place="true" is_human="false"/>
 
         <point_place id="ładowarka" name="ładowarka" position="-2.1 -0.5" front_vec="-1 -0.1" face_place="false" is_human="false" />
 
