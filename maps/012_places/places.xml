@@ -3,39 +3,39 @@
     <map_context name="sim" map_param_filename="../012_sim_planning/map.yaml" map_filename="../012_sim_planning/map-clean.pgm" >
         <volumetric_mask filename="img/places_mask.png" />
 
-        <volumetric_place id="przesmyk" name="przesmyk" filename="img/korytarz_b.png"  face_place="false"/>
-        <volumetric_place id="kuchnia" name="kuchnia" filename="img/kuchnia.png" face_place="false" />
-        <volumetric_place id="pokoj" name="pokój" filename="img/pokoj.png"  face_place="false"/>
-        <volumetric_place id="salon" name="salon" filename="img/salon.png"  face_place="false"/>
-        <volumetric_place id="warsztat" name="warsztat" filename="img/warsztat.png"  face_place="false"/>
+        <volumetric_place id="przesmyk" name="przesmyk" filename="img/korytarz_b.png"  face_place="false" is_human="false"/>
+        <volumetric_place id="kuchnia" name="kuchnia" filename="img/kuchnia.png" face_place="false" is_human="false" />
+        <volumetric_place id="pokoj" name="pokój" filename="img/pokoj.png"  face_place="false" is_human="false"/>
+        <volumetric_place id="salon" name="salon" filename="img/salon.png"  face_place="false" is_human="false"/>
+        <volumetric_place id="warsztat" name="warsztat" filename="img/warsztat.png"  face_place="false" is_human="false"/>
 
-        <point_place id="fotel" name="fotel" position="-0.64 0.34" front_vec="0 -1"  face_place="false"/>
-        <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0"  face_place="false"/>
+        <point_place id="fotel" name="fotel" position="-0.64 0.34" front_vec="0 -1"  face_place="true" is_human="false"/>
+        <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0"  face_place="false" is_human="false"/>
 
-        <point_place id="ladowarka" name="ładowarka" position="-2.1 -0.5" front_vec="1 -0.1" face_place="false" />
+        <point_place id="ładowarka" name="ładowarka" position="-2.1 -0.5" front_vec="-1 -0.1" face_place="false" is_human="false" />
 
        <!-- <point_place id="John" name="John" position="-1 0" front_vec="1 0.1"  face_place="true"/>
-        <point_place id="John_dest" name="John_dest" position="3.5 6.5" front_vec="0 -1"  face_place="false"/> -->
+        <point_place id="John_dest" name="John_dest" position="3.5 6.5" front_vec="0 -1"  face_place="false" is_human="false"/> -->
        <!-- <point_place id="Sara" name="Sara" position="4 5" front_vec="-1 -0.1" /> -->
-        <point_place id="Sara" name="Sara" position="-1 0.5" front_vec="1 0.1"  face_place="false"/> 
-        <!-- <point_place id="Alice" name="Alice" position="3.5 1" front_vec="-0.5 0.5"  face_place="false"/>
-        <point_place id="Alice_dest" name="Alice_dest" position="1 -1" front_vec="-1 0"  face_place="false"/> -->
-        <point_place id="Peter" name="Peter" position="2 10" front_vec="1 -0.1"  face_place="false"/>
-        <!-- <point_place id="Rico" name="Rico" position="2 10" front_vec="1 -0.1"  face_place="false"/> -->
+        <point_place id="sara" name="Sara" position="-1 0.5" front_vec="1 0.1"  face_place="false" is_human="true"/> 
+        <!-- <point_place id="Alice" name="Alice" position="3.5 1" front_vec="-0.5 0.5"  face_place="false" is_human="false"/>
+        <point_place id="Alice_dest" name="Alice_dest" position="1 -1" front_vec="-1 0"  face_place="false" is_human="false"/> -->
+        <point_place id="peter" name="peter" position="2 10" front_vec="1 -0.1"  face_place="false" is_human="true"/>
+        <!-- <point_place id="Rico" name="Rico" position="2 10" front_vec="1 -0.1"  face_place="false" is_human="false"/> -->
     </map_context>
 
     <map_context name="real" map_param_filename="../012_real_localization/map.yaml" map_filename="../012_real_localization/map_real.pgm" >
         <volumetric_place id="korytarz" name="korytarz" filename="img/korytarz_a.png" />
-        <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" />
-        <point_place id="wojtas" name="wojtas" position="3.0 5.3" front_vec="1 1" />
-        <point_place id="Rico" name="Rico" position="2 10" front_vec="1 -0.1"  face_place="false"/>
-        <point_place id="John" name="John" position="-1 -0.5" front_vec="1 0.1"  face_place="false"/>
-        <point_place id="Biuro" name="Biuro" position="4.8 6.5" front_vec="-1 -1"  face_place="false"/>
-        <point_place id="Salon" name="Salon" position="1 0" front_vec="1 0"  face_place="false"/>
-        <point_place id="Tomek" name="Tomek" position="1 1" front_vec="-0.5 0.5"  face_place="false"/>
-        <point_place id="Maciej" name="Maciej" position="1 1" front_vec="-0.5 0.5"  face_place="false"/>
-        <point_place id="Krzysztof" name="Krzysztof" position="1 1" front_vec="-0.5 0.5"  face_place="false"/>
-        <point_place id="Gustaw" name="Gustaw" position="1 1" front_vec="-0.5 0.5"  face_place="false"/>
+        <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" face_place="false" is_human="false"/>
+        <point_place id="biuro" name="biuro" position="4.8 6.5" front_vec="-1 -1"  face_place="false" is_human="false"/>
+        <point_place id="wojtas" name="wojtas" position="3.0 5.3" front_vec="1 1" face_place="false" is_human="true"/>
+        <point_place id="Rico" name="Rico" position="2 10" front_vec="1 -0.1"  face_place="false" is_human="false"/>
+        <point_place id="john" name="john" position="-1 -0.5" front_vec="1 0.1"  face_place="false" is_human="true"/>
+        <!--<point_place id="salon" name="Salon" position="1 0" front_vec="1 0"  face_place="false" is_human="false"/> -->
+        <point_place id="tomek" name="tomek" position="1 1" front_vec="-0.5 0.5"  face_place="false" is_human="true"/>
+        <point_place id="maciej" name="maciej" position="1 1" front_vec="-0.5 0.5"  face_place="false" is_human="true"/>
+        <point_place id="krzysztof" name="krzysztof" position="1 1" front_vec="-0.5 0.5"  face_place="false" is_human="true"/>
+        <point_place id="gustaw" name="gustaw" position="1 1" front_vec="-0.5 0.5"  face_place="false" is_human="true"/>
     </map_context>
 
     <map_transform map1="sim" map2="real" translation="-1.87296056747 -0.53914129734" rotation="-0.0821140241595" />
