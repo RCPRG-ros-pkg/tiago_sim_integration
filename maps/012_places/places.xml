@@ -28,7 +28,7 @@
         <volumetric_place id="korytarz" name="korytarz" filename="img/korytarz_a.png" />
         <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" face_place="false" is_human="false"/>
         <point_place id="biuro" name="biuro" position="4.8 6.5" front_vec="-1 -1"  face_place="false" is_human="false"/>
-        <point_place id="wojtas" name="wojtas" position="3.0 5.3" front_vec="1 1" face_place="false" is_human="true"/>
+        <point_place id="wojtek" name="wojtek" position="3.0 5.3" front_vec="1 1" face_place="false" is_human="true"/>
         <point_place id="Rico" name="Rico" position="2 10" front_vec="1 -0.1"  face_place="false" is_human="false"/>
         <point_place id="john" name="john" position="-1 -0.5" front_vec="1 0.1"  face_place="false" is_human="true"/>
         <!--<point_place id="salon" name="Salon" position="1 0" front_vec="1 0"  face_place="false" is_human="false"/> -->
