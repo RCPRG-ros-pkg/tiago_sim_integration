@@ -13,12 +13,14 @@
         <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0" />
 
         <point_place id="ladowarka" name="ładowarka" position="-2.1 -0.5" front_vec="1 -0.1" />
+        <point_place id="Rico" name="Rico" position="0 0" front_vec="1 -0.1" />
     </map_context>
 
     <map_context name="real" map_param_filename="../012_real_localization/map.yaml" map_filename="../012_real_localization/map_real.pgm" >
         <volumetric_place id="korytarz" name="korytarz" filename="img/korytarz_a.png" />
         <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" />
-        <point_place id="wojtas" name="wojtas" position="3.0 5.3" front_vec="1 1" />
+        <point_place id="wojtek" name="wojtek" position="3.0 5.3" front_vec="1 1" />
+        <point_place id="tomek" name="tomek" position="0.5 0" front_vec="1 1" />
     </map_context>
 
     <map_transform map1="sim" map2="real" translation="-1.87296056747 -0.53914129734" rotation="-0.0821140241595" />
