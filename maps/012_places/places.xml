@@ -20,7 +20,7 @@
         <volumetric_place id="korytarz" name="korytarz" filename="img/korytarz_a.png" />
         <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" />
         <point_place id="wojtek" name="wojtek" position="3.0 5.3" front_vec="1 1" />
-        <point_place id="tomek" name="tomek" position="0.5 0" front_vec="1 1" />
+        <point_place id="keeper" name="keeper" position="0.5 0" front_vec="1 1" />
     </map_context>
 
     <map_transform map1="sim" map2="real" translation="-1.87296056747 -0.53914129734" rotation="-0.0821140241595" />
