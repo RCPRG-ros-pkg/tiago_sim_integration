@@ -3,11 +3,11 @@
     <map_context name="sim" map_param_filename="../012_sim_planning/map.yaml" map_filename="../012_sim_planning/map-clean.pgm" >
         <volumetric_mask filename="img/places_mask.png" />
 
-        <volumetric_place id="przesmyk" name="przesmyk" filename="img/korytarz_b.png" />
-        <volumetric_place id="kuchnia" name="kuchnia" filename="img/kuchnia.png" />
-        <volumetric_place id="pokoj" name="pokój" filename="img/pokoj.png" />
-        <volumetric_place id="salon" name="salon" filename="img/salon.png" />
-        <volumetric_place id="warsztat" name="warsztat" filename="img/warsztat.png" />
+        <volumetric_place id="przesmyk" name="isthmus" filename="img/korytarz_b.png" />
+        <volumetric_place id="kuchnia" name="kitchen" filename="img/kuchnia.png" />
+        <volumetric_place id="pokoj" name="room" filename="img/pokoj.png" />
+        <volumetric_place id="salon" name="living room" filename="img/salon.png" />
+        <volumetric_place id="warsztat" name="workshop" filename="img/warsztat.png" />
 
         <point_place id="fotel" name="fotel" position="-0.64 0.34" front_vec="0 -1" />
         <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0" />
@@ -17,7 +17,7 @@
     </map_context>
 
     <map_context name="real" map_param_filename="../012_real_localization/map.yaml" map_filename="../012_real_localization/map_real.pgm" >
-        <volumetric_place id="korytarz" name="korytarz" filename="img/korytarz_a.png" />
+        <volumetric_place id="korytarz" name="corridor" filename="img/korytarz_a.png" />
         <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" />
         <point_place id="wojtek" name="wojtek" position="3.0 5.3" front_vec="1 1" />
         <point_place id="keeper" name="keeper" position="0.5 0" front_vec="1 1" />
