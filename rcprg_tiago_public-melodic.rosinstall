@@ -44,7 +44,7 @@
 - git: {local-name: rcprg/tiago_sim_integration, uri: 'https://github.com/RCPRG-ros-pkg/tiago_sim_integration.git',     version: master}
 - git: {local-name: rcprg/rosplan_interface_tiago, uri: 'https://github.com/RCPRG-ros-pkg/rosplan_interface_tiago.git', version: develop}
 - git: {local-name: rcprg/ROSPlan,          uri: 'https://github.com/varsheim/ROSPlan.git',                     version: develop}
-- git: {local-name: rcprg/dialogflow,       uri: 'https://gitlab.com/incare/dialogflow.git',                    version: tiago_msgs}
+- git: {local-name: rcprg/dialogflow,       uri: 'https://github.com/RCPRG-ros-pkg/dialogflow.git',           version: tiago_msgs}
 - git: {local-name: rcprg/tiago_task_manager, uri: 'https://github.com/RCPRG-ros-pkg/tiago_task_manager.git',   version: master}
 - git: {local-name: rcprg/tiago_msgs,       uri: 'https://github.com/RCPRG-ros-pkg/tiago_msgs.git',             version: master}
 - git: {local-name: rcprg/tiago_behaviours, uri: 'https://github.com/RCPRG-ros-pkg/tiago_behaviours.git',       version: master}
