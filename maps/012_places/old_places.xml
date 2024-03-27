@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<places>
+    <map_context name="sim" map_param_filename="../012_sim_planning/map.yaml" map_filename="../012_sim_planning/map-clean.pgm" >
+        <volumetric_mask filename="img/places_mask.png" />
+
+        <volumetric_place id="przesmyk" name="przesmyk" filename="img/korytarz_b.png" />
+        <volumetric_place id="kuchnia" name="kuchnia" filename="img/kuchnia.png" />
+        <volumetric_place id="pokoj" name="pokój" filename="img/pokoj.png" />
+        <volumetric_place id="salon" name="salon" filename="img/salon.png" />
+        <volumetric_place id="warsztat" name="warsztat" filename="img/warsztat.png" />
+
+        <point_place id="fotel" name="fotel" position="-0.64 0.34" front_vec="0 -1" />
+        <point_place id="drzwi" name="drzwi" position="4.6 1.65" front_vec="-1 0" />
+
+        <point_place id="ladowarka" name="ładowarka" position="-2.1 -0.5" front_vec="1 -0.1" />
+        <point_place id="Rico" name="Rico" position="0 0" front_vec="1 -0.1" />
+    </map_context>
+
+    <map_context name="real" map_param_filename="../012_real_localization/map.yaml" map_filename="../012_real_localization/map_real.pgm" >
+        <volumetric_place id="korytarz" name="korytarz" filename="img/korytarz_a.png" />
+        <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" />
+        <point_place id="wojtek" name="wojtek" position="3.0 5.3" front_vec="1 1" />
+        <point_place id="tomek" name="tomek" position="0.5 0" front_vec="1 1" />
+    </map_context>
+
+    <map_transform map1="sim" map2="real" translation="-1.87296056747 -0.53914129734" rotation="-0.0821140241595" />
+</places>
