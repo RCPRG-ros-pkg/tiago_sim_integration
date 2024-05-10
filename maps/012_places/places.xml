@@ -29,6 +29,9 @@
         <volumetric_place id="zmywak" name="zmywak" filename="img/zmywak_real.png" />
         <volumetric_place id="drukarka" name="drukarka" filename="img/drukarka_real.png" />
         <point_place id="keeper" name="keeper" position="17 7.5" front_vec="1 1" />
+        <point_place id="senior" name="senior" position="8.8 8" front_vec="1 1" />
+        <point_place id="keeper_sim" name="keeper_sim" position="2.8 -1.13" front_vec="1 1" />
+        <point_place id="senior_sim" name="senior_sim" position="-1.5 0" front_vec="1 1" />
     </map_context>
 
     <!-- <map_transform map1="sim" map2="real" translation="-1.87296056747 -0.53914129734" rotation="-0.0821140241595" /> -->
