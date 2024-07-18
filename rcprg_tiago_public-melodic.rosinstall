@@ -56,4 +56,4 @@
 - git: {local-name: rcprg/rico-language-processor,         uri: 'https://github.com/RCPRG-ros-pkg/rico-language-processor.git',               version: main}
 - git: {local-name: rcprg/rico-task-database,         uri: 'https://github.com/RCPRG-ros-pkg/rico-task-database.git',               version: main}
 - git: {local-name: rcprg/tasker,         uri: 'https://github.com/RCPRG-ros-pkg/tasker.git',               version: advance_conversation}
-- git: {local-name: rcprg/tasker_msgs,         uri: 'https://github.com/RCPRG-ros-pkg/tasker_mags.git',               version: smit}
+- git: {local-name: rcprg/tasker_msgs,         uri: 'https://github.com/RCPRG-ros-pkg/tasker_msgs.git',               version: smit}
