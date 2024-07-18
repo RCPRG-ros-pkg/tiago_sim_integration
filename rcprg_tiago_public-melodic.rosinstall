@@ -44,8 +44,16 @@
 - git: {local-name: rcprg/tiago_sim_integration, uri: 'https://github.com/RCPRG-ros-pkg/tiago_sim_integration.git',     version: master}
 - git: {local-name: rcprg/rosplan_interface_tiago, uri: 'https://github.com/RCPRG-ros-pkg/rosplan_interface_tiago.git', version: develop}
 - git: {local-name: rcprg/ROSPlan,          uri: 'https://github.com/varsheim/ROSPlan.git',                     version: develop}
-- git: {local-name: rcprg/dialog,       uri: 'https://github.com/RCPRG-ros-pkg/dialog.git',           version: tiago_msgs}
+- git: {local-name: rcprg/dialog,       uri: 'https://github.com/RCPRG-ros-pkg/dialog.git',           version: advance_conversation_openai}
 - git: {local-name: rcprg/tiago_task_manager, uri: 'https://github.com/RCPRG-ros-pkg/tiago_task_manager.git',   version: master}
 - git: {local-name: rcprg/tiago_msgs,       uri: 'https://github.com/RCPRG-ros-pkg/tiago_msgs.git',             version: master}
 - git: {local-name: rcprg/tiago_behaviours, uri: 'https://github.com/RCPRG-ros-pkg/tiago_behaviours.git',       version: master}
 - git: {local-name: rcprg/pl_nouns,         uri: 'https://github.com/RCPRG-ros-pkg/pl_nouns.git',               version: master}
+- git: {local-name: rcprg/rcprg_kb,         uri: 'https://github.com/RCPRG-ros-pkg/rcprg_kb.git',               version: advance_conversation}
+- git: {local-name: rcprg/rcprg_smach,         uri: 'https://github.com/RCPRG-ros-pkg/rcprg_smach.git',               version: advance_conversation_openai}
+- git: {local-name: rcprg/rico-context,         uri: 'https://github.com/RCPRG-ros-pkg/rico-context.git',               version: main}
+- git: {local-name: rcprg/rico-conversation-msgs,         uri: 'https://github.com/RCPRG-ros-pkg/rico-conversation-msgs.git',               version: main}
+- git: {local-name: rcprg/rico-language-processor,         uri: 'https://github.com/RCPRG-ros-pkg/rico-language-processor.git',               version: main}
+- git: {local-name: rcprg/rico-task-database,         uri: 'https://github.com/RCPRG-ros-pkg/rico-task-database.git',               version: main}
+- git: {local-name: rcprg/tasker,         uri: 'https://github.com/RCPRG-ros-pkg/tasker.git',               version: advance_conversation}
+- git: {local-name: rcprg/tasker_msgs,         uri: 'https://github.com/RCPRG-ros-pkg/tasker_mags.git',               version: smit}
