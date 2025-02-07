@@ -20,14 +20,14 @@
 <!--         <volumetric_place id="korytarz" name="korytarz" filename="img/korytarz_a.png" />
         <point_place id="slon" name="słoń" position="3.0 6.5" front_vec="1 -1" />
         <point_place id="wojtek" name="wojtek" position="3.0 5.3" front_vec="1 1" /> -->
-        <volumetric_place id="kuchnia" name="kuchnia" filename="img/kuchnia_real.png" />
-        <volumetric_place id="fotel" name="fotel" filename="img/fotel_real.png" />
-        <volumetric_place id="drzwi" name="drzwi" filename="img/drzwi_real.png" />
-        <volumetric_place id="plansza" name="plansza" filename="img/plansza_real.png" />
-        <volumetric_place id="tablica" name="tablica" filename="img/tablica_real.png" />
-        <volumetric_place id="warsztat" name="warsztat" filename="img/warsztat_real.png" />
-        <volumetric_place id="zmywak" name="zmywak" filename="img/zmywak_real.png" />
-        <volumetric_place id="drukarka" name="drukarka" filename="img/drukarka_real.png" />
+        <volumetric_place id="kitchen" name="kitchen" filename="img/kuchnia_real.png" />
+        <volumetric_place id="armchair" name="armchair" filename="img/fotel_real.png" />
+        <volumetric_place id="door" name="door" filename="img/drzwi_real.png" />
+        <volumetric_place id="board" name="board" filename="img/plansza_real.png" />
+        <volumetric_place id="whiteboard" name="whiteboard" filename="img/tablica_real.png" />
+        <volumetric_place id="workshop" name="workshop" filename="img/warsztat_real.png" />
+        <volumetric_place id="sink" name="sink" filename="img/zmywak_real.png" />
+        <volumetric_place id="printer" name="printer" filename="img/drukarka_real.png" />
         <point_place id="keeper" name="keeper" position="17 7.5" front_vec="1 1" />
     </map_context>
 
